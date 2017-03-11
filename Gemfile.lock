@@ -160,7 +160,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mysql2 (~> 0.4.4)
+  mysql2 (>= 0.3.13, < 0.5)
   pg (~> 0.18.4)
   rails (= 4.2.6)
   rails_12factor (~> 0.0.3)
