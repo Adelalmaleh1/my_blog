@@ -1,2 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo{
+	float: left;
+	font-size: 1.7em;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.center{
+	text-align: center;
+	height: 500px;
+}
