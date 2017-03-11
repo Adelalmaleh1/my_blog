@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
+<h2 class="center">Title: <%= @article.title %></h2>
+	
+<div class="well col-xs-8 col-xs-offset-2">
+	
+	<h4 class="center description">
+		<strong>
+			Description:
+		</strong>
+	</h4>
+	<br>
+	<%= @article.description %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @article.description %>
-</p>
 
-<%= link_to 'Edit this article', edit_article_path(@article) %> |
-<%= link_to 'Back to articles list', articles_path %>
+
+<div class="article-art">
+	<%= link_to 'Edit this article', edit_article_path(@article), class: "label label-primary" %> |
+	<%= link_to 'Delete this Article', @article, method: :delete, data: { confirm: 'Are you sure?' }, class: "label label-danger" %> |
+	<%= link_to 'Back to articles list', articles_path, class: "label label-success"%>
+	
+</div>
+
+</div>
