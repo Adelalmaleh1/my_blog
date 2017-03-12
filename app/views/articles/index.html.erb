@@ -1,3 +1,8 @@
+<h2 class="center">
+  <strong>
+    Listing of Articles
+  </strong>
+</h2>
 <% @articles.each do |article| %>
   <div class="row">
     <div class=" col-xs-8 col-xs-offset-2">
@@ -10,7 +15,10 @@
             <%= truncate(article.description, length: 100) %>
 
           </div>
-          <small>created by: <%= article.user.username if article.user%></small>
+          <small>created by: <%= link_to article.user.username if article.user%> Created:
+            <%= time_ago_in_words(article.created_at)%> ago
+            
+          </small>
             <div class= "article-actions">
               
               <%= link_to " edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
@@ -21,5 +29,8 @@
       </div>
     </div>
  <% end %>
+ <div class="new_article">
+   <%= link_to "New Article", new_article_path, class: "btn btn-info" %>
+ </div>
 
     

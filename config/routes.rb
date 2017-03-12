@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
   devise_for :users
+  get "users/:id/edit" => 'users#show', as: :edit_user
   get 'user/:id' => 'users#show', as: :user
   get 'users' => 'users#index', as: :user_index
   get 'welcome/about'
