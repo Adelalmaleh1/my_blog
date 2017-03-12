@@ -10,6 +10,7 @@
             <%= truncate(article.description, length: 100) %>
 
           </div>
+          <small>created by: <%= article.user.username if article.user%></small>
             <div class= "article-actions">
               
               <%= link_to " edit this article", edit_article_path(article), class: "btn btn-xs btn-primary" %>
